@@ -23,6 +23,7 @@ const inputRef = useRef()
         /></div>
       
         <button
+            className='add'
             type='submit'
             aria-label = 'Add Item'
             onClick={ () => inputRef.current.focus()}

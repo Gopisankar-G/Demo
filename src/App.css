@@ -228,17 +228,6 @@ nav {
   margin-right: 150px;
 }
 
-.contact-links g {
-  font-size: x-large;
-  display: inline-block;
-  color: white;
-  text-decoration: none;
-  justify-content: flex-start;
-  margin-left: 20px;
-  margin-right: 100px;
-}
-
-
 
 .contact-links h4 {
   display: inline;
@@ -318,9 +307,9 @@ nav {
   outline: none;
 }
 
-/*button {
-  height: 48px;
-  min-width: 48px;
+.add{
+  height: 55px;
+  min-width: 55px;
   border-radius: 0.25rem;
   padding: 0.5rem;
   font-size: 1rem;
@@ -329,12 +318,12 @@ nav {
   cursor: pointer;
 }
 
-button:focus, 
-button:hover {
+.add:focus, 
+.add:hover {
   color: white;
   background-color: limegreen;
   outline: none;
-}*/
+}
 
 
 
