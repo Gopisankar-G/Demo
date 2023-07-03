@@ -28,7 +28,6 @@
     border-radius: 20px solid rgb(150, 53, 110);
     border-radius: 20px;
     background-color: rgb(150, 53, 110);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
 
@@ -104,7 +103,7 @@
   }
 
   h3{
-    color: white;
+    color: black;
   }
 
 .project-list {
@@ -192,13 +191,14 @@ nav {
   gap: 20px;
 }
 
-.contact {
+ .contact {
   margin-top: 20px;
-  background-color: lightcyan;
+  background-color: rgb(134, 71, 165);
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+} 
+
 
 #git{
   width: 2em;
@@ -211,16 +211,34 @@ nav {
   display: inline-block;
   margin-top: 20px;
   margin-right: 10px;
-  color: #333;
+  color: white;
   text-decoration: none;
+  justify-content: flex-start;
+  margin-left: 20px;
+    
 }
 
 .contact-links p {
   font-size: x-large;
   display: inline-block;
-  color: #333;
+  color: white;
   text-decoration: none;
+  justify-content: flex-start;
+  margin-left: 20px;
+  margin-right: 150px;
 }
+
+.contact-links g {
+  font-size: x-large;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  justify-content: flex-start;
+  margin-left: 20px;
+  margin-right: 100px;
+}
+
+
 
 .contact-links h4 {
   display: inline;
@@ -231,9 +249,9 @@ nav {
   display: flex;
   justify-content: flex-center;
   align-items: center;
-  padding: 0.5rem 0 0.5rem 0.5rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
   margin: 0.25rem 0;
-  background-color: whitesmoke;
+  background-color: lightsteelblue;
 }
 
 .item:first-child {
@@ -256,7 +274,7 @@ nav {
 .item > label {
   font-size: 25px;
   flex-grow: 1;
-  color : red;
+  color : white;
 }
 
 .item svg {
@@ -280,9 +298,8 @@ nav {
   display: flex;
   justify-content: center;
   margin: 0.5rem 0 0;
-  padding: 0;
-  border-bottom: 1px solid #eee;  
-  background-color: white;
+  padding: 0.5rem;
+  background-color: lightcyan;
 }
 
 .addForm label {

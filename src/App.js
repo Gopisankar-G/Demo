@@ -1,6 +1,7 @@
 import React, {useState}  from 'react';
 import { FaGithub } from 'react-icons/fa';
-import { MdContacts } from 'react-icons/md';
+import { BsTelephoneFill } from 'react-icons/bs';
+import { BiLogoGmail } from 'react-icons/bi';
 import './App.css';
 import AddItem from "./AddItem";
 import Content from "./Content";
@@ -96,6 +97,7 @@ function App() {
     {
       id: 2,
       githubLink: 'https://github.com/Gopisankar-G',
+      emaillink: 'https://outlook.office.com/mail/',
       ContactNo: localStorage.getItem('contactNo'),
     },
   ];
@@ -217,31 +219,27 @@ function App() {
                   {currentPage === 'additem' && (
                     <section className="additem" id="additem">
                       <div className="additem-list">
-                        {Abstract.map((project) => (
-                          <div className="additem" key={project.id}>
-                            <div className="additem-info">
+                          <div className="project">
                               <AddItem
                                 newItem={newItem}
                                 setNewItem={setNewItem}
                                 handleSubmit={handleSubmit}
                               />
-
+                              <br />
                               <Content
                                 items={items.filter(item => ((item.item)))}
                                 handleCheck={handleCheck}
                                 handleDelete={handleDelete}
                               />
-                            </div>
-                          </div>
-                        ))}
+                            </div>                          
                       </div>
-
                     </section>
                   )}
 
                   {currentPage === 'about' && (
                     <section className="about" id="about">
-                     
+                     <div className="additem-list">
+                      <div className="project">
                             <p><h3>
                               <ul>
                                 <li>HCL Software: HCL Software is a division of HCL Technologies, a global technology company based in India. HCL Software focuses on developing and delivering a wide range of enterprise software solutions.</li>
@@ -253,7 +251,8 @@ function App() {
                                 </video>
                               </ul>
                             </h3></p>
-                          
+                            </div>
+                            </div>
                     </section>
                   )}
 
@@ -262,11 +261,15 @@ function App() {
                       <div className="contact-links">
                         {Contact.map((contact) => (
                           <div className="contact-info">
-
+                            <br />
                             <a href={contact.githubLink} target="_blank" rel="noopener noreferrer">
                               <FaGithub style={{ marginRight: '5px' }} /> <h4 >github.com/Gopisankar-G</h4>
-                            </a><br /><br />
-                            <p><MdContacts style={{ marginRight: '5px' }} /> <h4 >9876543210</h4></p>
+                            </a><br />
+                            <a id = "elink" href={contact.emaillink} target="_blank" rel="noopener noreferrer">
+                              <BiLogoGmail style={{ marginRight: '5px' }} /> <h4 >gopisankarhcl@gmail.com </h4>
+                            </a>
+                            <br />
+                            <p><BsTelephoneFill style={{ marginRight: '5px' }} /> <h4 >7825047909</h4></p>
                           </div>
                         ))}
                       </div>
