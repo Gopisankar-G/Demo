@@ -5,7 +5,6 @@ import { BiLogoGmail } from 'react-icons/bi';
 import './App.css';
 import AddItem from "./AddItem";
 import Content from "./Content";
-//import { useEffect } from 'react';
 
 
 function App() {
@@ -19,25 +18,8 @@ function App() {
   const [loginPassword, setLoginPassword] = useState('');
   const [register, setRegister] = useState(false);
   const [currentPage, setCurrentPage] = useState('Abstract');
-  //const API_URL = "http://localhost:3100/items";
   const [items, setItems] = useState([]);
   const [newItem, setNewItem] = useState('')
-
-  /*useEffect(() => {
-    const fetchItems = async () => {
-      try {
-        const response = await fetch(API_URL);
-        console.log(response)
-        const listItems = await response.json();
-        console.log(listItems)
-        setItems(listItems);
-      } catch (err) {
-        console.log(err.stack)
-      }
-    }
-
-    (async () => await fetchItems())()
-  }, [])*/
 
   const handleRegistration = (e) => {
     e.preventDefault();
@@ -60,9 +42,7 @@ function App() {
   }
 
   const handlePageChange = (page) => {
-    setCurrentPage(page);
-       
-    
+    setCurrentPage(page);    
   };
 
   const handleLogin = (e) => {
@@ -98,7 +78,6 @@ function App() {
       id: 2,
       githubLink: 'https://github.com/Gopisankar-G',
       emaillink: 'https://outlook.office.com/mail/',
-      ContactNo: localStorage.getItem('contactNo'),
     },
   ];
 
@@ -286,9 +265,8 @@ function App() {
               </div>
 
             ) : (
-              <div className="log" >
-                
-                <form onSubmit={handleLogin} id="log" >
+              <div className="log" >                
+                <form onSubmit={handleLogin}  >
                   <label>
                     Username
                     <input

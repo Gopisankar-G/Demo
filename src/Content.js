@@ -1,7 +1,7 @@
 import React from 'react'
 import ItemsComp from './ItemsComp';
 
-const Content = ({items, handleCheck, handleDelete, handleReload}) => {
+const Content = ({items, handleCheck, handleDelete}) => {
     
 
   return (
